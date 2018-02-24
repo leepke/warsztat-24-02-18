@@ -77,7 +77,7 @@
                 mole = makeMole()
                 reduceTime()
             },
-            1000
+            10000
         )
     }
 
