@@ -104,7 +104,18 @@
     function endGame(){
         clearInterval(gameIntervalId)
         mole.remove()
-        alert('Gra skończona!\nTwoje punkty: ' + points + ' !')
+
+        document.querySelector('.end-modal')
+            .style.display = 'block'
+
+        document.querySelector('.end-modal button')
+            .addEventListener(
+                'click',
+                function(){
+                    document.querySelector('.end-modal')
+                        .style.display = 'none'
+                    init()
+                    startGame()
     }
 
     init()
