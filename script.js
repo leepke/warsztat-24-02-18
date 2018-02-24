@@ -25,7 +25,37 @@ console.log(nullVariable)
 var undefinedVariable = undefined
 console.log(undefinedVariable)
 
+//objects
+
+var simplestObj = {
+    name: 'Krzysztof',
+    lastname: 'Lipka'
+
+}
+console.log(simplestObj)
+
+// nested objects with data
+
+var nastedObj = {
+    name: 'Krzysiek',
+    car: {
+        brand: 'Skoda',
+        engine: 1.4
+    }
+}
+console.log(nastedObj)
+console.log(nastedObj.car.engine)
+console.log(nastedObj.car.year) //undefined
 
 
-
-
+//arrays
+var simpleArray = [
+    1,
+    {name: 'Ala' },
+    3,
+    4,
+    5
+]
+console.log(simpleArray)
+console.log(simpleArray[4])
+console.log(simpleArray[1].name)
