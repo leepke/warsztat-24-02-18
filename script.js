@@ -1,13 +1,21 @@
-setInterval(
-    function(){
-        console.log('Minęła sekunda!')
+(function (){
 
-    },
-    1000
-)
+    var secondsCounter = 1
 
-function add(a, b){
-    var someVariable = 123
-    return a + b
 
+    var intevalId setInterval(
+        function(){
+            console.log(secondsCounter++)
+
+        },
+        1000
+    )
+
+    setTimeout (
+            function(){
+                    clearInterval(intevalId)
+            },
+            5000
+    )
 }
+)()
