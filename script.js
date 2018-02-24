@@ -1,21 +1,10 @@
-(function (){
+var body = document.querySelector('body')
 
-    var secondsCounter = 1
+console.log(body)
 
-
-    var intevalId setInterval(
-        function(){
-            console.log(secondsCounter++)
-
-        },
-        1000
-    )
-
-    setTimeout (
-            function(){
-                    clearInterval(intevalId)
-            },
-            5000
-    )
-}
-)()
+body.addEventListener (
+    'click',
+    function(){
+        console.log('Klik!')        
+    }
+)
