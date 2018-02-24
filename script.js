@@ -83,7 +83,7 @@
 
     function init(){
         points = 0
-        time = 10
+        time = 100
         
 
         displayPoints(points)
