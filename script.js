@@ -100,10 +100,14 @@
             )
   
     }
-    
+    init()
+
     function endGame(){
         clearInterval(gameIntervalId)
         mole.remove()
+
+        document.querySelector('.end-modal .score')
+            .innerText = points + ' punktów!'
 
         document.querySelector('.end-modal')
             .style.display = 'block'
@@ -112,12 +116,10 @@
             .addEventListener(
                 'click',
                 function(){
-                    document.querySelector('.end-modal')
-                        .style.display = 'none'
-                    init()
-                    startGame()
+                    window.location = ''
+                }
+            )
     }
-
-    init()
+   
 
 })()
