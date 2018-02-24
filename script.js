@@ -1,15 +1,14 @@
 
-//funkcion declaration 
+//function declaration 
 
-function hello(name){ //parametr
-
-    console.log('Hello ' + name + '!')
-    console.log('Hello ' + name + '!')
-    console.log('Hello ' + name + '!')
+function hello(name, numberOfLogs){ //parametr
+    for(var i = 0; i < numberOfLogs; i++) {
+        console.log('Hello ' + name + '!')
+    }
 }
 
 //function invocation (call)
 
-hello('Mateusz')
-hello('Ala')
-hello('Ela')
+hello('Mateusz', 1)
+hello('Ala', 2)
+hello('Ela', 3)
