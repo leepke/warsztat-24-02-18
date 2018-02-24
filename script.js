@@ -12,8 +12,13 @@
 
     function displayPoints(pointsParam){
         var pointsContainer = document.querySelector('.points')
-        pointsContainer.innerText = pointsParam
-}
+        pointsContainer.innerText = 'Punkty: ' + pointsParam
+    }
+
+    function displayTime(timeParam){
+        var timeContainer = document.querySelector('.time')
+        timeContainer.innerText = timeParam
+    }
 
 
     function makeMole(){
@@ -51,6 +56,15 @@
         mole = makeMole()
 
         displayPoints(points)
+        displayTime(time)
+
+        gameIntervalId = setInterval(
+            function(){
+                mole.remove()
+                mole = makeMole()
+            },
+            1000
+        )
     }
     
     init()
