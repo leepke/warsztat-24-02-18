@@ -6,8 +6,13 @@
 
     function addPoint(){
         points++
-        console.log('Dodano punkt!', points)
         displayPoints(points)
+    
+    }
+
+    function reduceTime(){
+        time--
+        displayTime(time)
     }
 
     function displayPoints(pointsParam){
@@ -19,7 +24,6 @@
         var timeContainer = document.querySelector('.time')
         timeContainer.innerText = timeParam
     }
-
 
     function makeMole(){
 
@@ -62,6 +66,7 @@
             function(){
                 mole.remove()
                 mole = makeMole()
+                reduceTime()
             },
             1000
         )
