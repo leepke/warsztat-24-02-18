@@ -49,6 +49,7 @@
                 function(){
                     mole.remove()
                     addPoint()
+                    flashBackground()
                 }
             )
 
@@ -56,6 +57,18 @@
 
             return mole
     }
+
+    function flashBackground(){
+        var body = document.querySelector('body')
+        body.style.backgroundColor = 'red'
+        setTimeout(
+            function(){
+                body.style.backgroundColor = 'green'
+        },
+        100        
+    )
+    }
+
 
     function init(){
         points = 0
@@ -71,7 +84,7 @@
                 mole = makeMole()
                 reduceTime()
             },
-            1000
+            1500
         )
     }
     
